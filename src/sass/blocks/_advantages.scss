@@ -1,0 +1,35 @@
+.advantages {
+    background-color: #f6f6f6;
+    padding: 70px 0;
+
+    &__items {
+        display: flex;
+        gap: 65px;
+    }
+
+    &__item {
+        text-align: center;
+        max-width: 270px;
+    }
+
+    &__img {
+        display: block;
+        margin: 0 auto 35px;
+    }
+
+    &__item-title {
+        font-weight: 700;
+        font-size: 18px;
+        color: #0d0d0d;
+        margin-bottom: 20px;
+    }
+
+    &__item-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 129%;
+        color: #0d0d0d;
+    }
+
+
+}

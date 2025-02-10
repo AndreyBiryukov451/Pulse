@@ -1,0 +1,137 @@
+@media (max-width: 980px) {
+    .promo {
+        padding: 21px 0 50px;
+        min-height: 550px;
+
+        &__title {
+            font-size: 35px;
+            margin-bottom: 14px;
+        }
+
+        &__subtitle {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .advantages {
+        &__items {
+            gap: 30px;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        margin-bottom: 50px;
+        gap: 20px;
+
+        &__contacts {
+            align-items: center
+        }
+    }
+
+    .promo {
+        &__wrp {
+            align-items: center
+        }
+    }
+
+    .title {
+        margin-bottom: 40px;
+    }
+
+    .advantages {
+        padding: 35px 0;
+
+        &__items {
+            gap: 15px;
+        }
+
+        &__img {
+            margin-bottom: 20px;
+        }
+
+        &__item-title {
+            font-size: 16px;
+        }
+
+        &__item-text {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .header {
+        gap: 10px;
+        margin-bottom: 40px;
+
+        &__logo {
+            width: 200px;
+        }
+    }
+
+    .promo {
+        padding: 10px 0 30px;
+        min-height: 440px;
+
+        &__title {
+            font-size: 26px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        &__items {
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        &__item {
+            max-width: 80px;
+
+            img {
+                margin-bottom: 10px;
+                width: 30px;
+            }
+
+            p {
+                font-size: 8px;
+            }
+        }
+    }
+
+    .advantages {
+        &__items {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .header {
+        &__oficial {
+            display: none;
+        }
+
+        &__phone {
+            font-size: 14px;
+        }
+    }
+
+    .promo {
+        font-size: 24px;
+    }
+
+}
