@@ -62,6 +62,11 @@
             font-size: 12px;
         }
     }
+
+    .consultation {
+        padding: 55px 0;
+        min-height: 500px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -132,6 +137,23 @@
 
     .promo {
         font-size: 24px;
+    }
+
+    .consultation {
+        padding: 20px 0;
+        min-height: 400px;
+
+        &__text {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .title {
+        &_left {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
     }
 
 }
