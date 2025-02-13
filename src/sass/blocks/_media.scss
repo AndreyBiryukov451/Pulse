@@ -19,6 +19,24 @@
             gap: 30px;
         }
     }
+
+    .carousel {
+        padding: 60px 0;
+
+        .carousel__btn-prev,
+        .carousel__btn-next {
+            display: none;
+        }
+    }
+
+    .catalog {
+
+        &__content {
+            grid-template-columns: repeat(2, 300px);
+            gap: 20px;
+            justify-content: center;
+        }
+    }
 }
 
 
@@ -66,6 +84,13 @@
     .consultation {
         padding: 55px 0;
         min-height: 500px;
+    }
+
+    .catalog {
+
+        &__content {
+            grid-template-columns: repeat(1, 300px);
+        }
     }
 }
 
@@ -122,6 +147,16 @@
             align-items: center;
         }
     }
+
+    .catalog {
+        padding-bottom: 20px;
+
+        &__tabs {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            ;
+        }
+    }
 }
 
 @media (max-width: 440px) {
@@ -154,6 +189,10 @@
             font-size: 20px;
             margin-bottom: 20px;
         }
+    }
+
+    .carousel {
+        padding: 30px 0;
     }
 
 }

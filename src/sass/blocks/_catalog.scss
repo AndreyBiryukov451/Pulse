@@ -1,0 +1,45 @@
+.catalog {
+    padding-bottom: 80px;
+
+    &__tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 55px;
+        justify-content: center;
+    }
+
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #6b6b6b;
+        transform: skewX(-25deg);
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 2px 2px 20px $main-color;
+            border: none
+        }
+
+        div {
+            transform: skewX(25deg);
+        }
+
+        &_active {
+            border: none;
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
