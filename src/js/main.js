@@ -68,7 +68,7 @@ function hideContent() {
     })
 }
 
-function showContent(i = 1) {
+function showContent(i = 0) {
     tabs[i].classList.add('catalog__tab_active');
     tabContent[i].style.display = 'grid'
 }
@@ -90,6 +90,44 @@ function showCurentTab() {
 }
 
 showCurentTab()
+
+// Modals
+
+const overlay = document.querySelector('.overlay'),
+    btn = document.querySelectorAll('button'),
+    consultationModal = document.querySelector('#consultation'),
+    orderModal = document.querySelector('#order'),
+    closeBtn = document.querySelectorAll('.modal__close')
+
+
+function openModal(modal) {
+    overlay.style.display = 'block';
+    modal.style.display = 'block';
+}
+
+btn.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        if (e.target.classList.contains('button_mini')) {
+            orderModal.querySelector('.modal__subtitle').textContent =
+                e.target.closest('.card').querySelector('.card__subtitle').textContent;
+            openModal(orderModal)
+        } else if (e.target.getAttribute('data-modal') === 'consultation') {
+            openModal(consultationModal)
+        }
+    })
+})
+
+function closeModal(btn) {
+    overlay.style.display = 'none';
+    btn.closest('.modal').style.display = 'none'
+}
+
+closeBtn.forEach(item => {
+    item.addEventListener('click', e => {
+        closeModal(e.target)
+    })
+})
+
 
 
 

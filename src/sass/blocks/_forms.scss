@@ -1,4 +1,4 @@
-.feed__form {
+.form {
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -26,5 +26,9 @@
             font-size: 14px;
             color: #4b4b4b;
         }
+    }
+
+    &_center {
+        margin: 0 auto;
     }
 }
