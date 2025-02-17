@@ -1,7 +1,6 @@
 
 // slider
 
-
 const swiper = new Swiper('.swiper', {
 
     // If we need pagination
@@ -35,9 +34,6 @@ const moreBtn = document.querySelectorAll('.card__link'),
     mainSide = document.querySelectorAll('.card__main'),
     infoSide = document.querySelectorAll('.card__info');
 
-
-
-
 function changeCardInner(btn) {
     btn.forEach((item, i) => {
         item.addEventListener('click', e => {
@@ -51,9 +47,7 @@ function changeCardInner(btn) {
 changeCardInner(moreBtn);
 changeCardInner(backBtn);
 
-
 // Tabs
-
 
 const tabs = document.querySelectorAll('.catalog__tab'),
     tabContent = document.querySelectorAll('.catalog__content'),
@@ -70,11 +64,11 @@ function hideContent() {
 
 function showContent(i = 0) {
     tabs[i].classList.add('catalog__tab_active');
-    tabContent[i].style.display = 'grid'
+    tabContent[i].style.display = 'grid';
 }
 
-hideContent()
-showContent()
+hideContent();
+showContent();
 
 function showCurentTab() {
     tabsContainer.addEventListener('click', (event) => {
@@ -87,9 +81,9 @@ function showCurentTab() {
             })
         }
     })
-}
+};
 
-showCurentTab()
+showCurentTab();
 
 // Modals
 
@@ -97,7 +91,7 @@ const overlay = document.querySelector('.overlay'),
     btn = document.querySelectorAll('button'),
     consultationModal = document.querySelector('#consultation'),
     orderModal = document.querySelector('#order'),
-    closeBtn = document.querySelectorAll('.modal__close')
+    closeBtn = document.querySelectorAll('.modal__close');
 
 
 function openModal(modal) {
@@ -115,21 +109,67 @@ btn.forEach((item) => {
             openModal(consultationModal)
         }
     })
-})
+});
 
 function closeModal(btn) {
     overlay.style.display = 'none';
     btn.closest('.modal').style.display = 'none'
-}
+};
 
 closeBtn.forEach(item => {
     item.addEventListener('click', e => {
         closeModal(e.target)
     })
-})
+});
 
 
+// form validation
 
+const form = document.querySelectorAll('.form');
+
+let textMessage = {
+    email: 'некорктный запрос',
+    name: 'Введите имя',
+    phone: 'Введите телефон'
+};
+
+form.forEach(item => {
+
+    const elem = item.querySelectorAll('input')
+
+    item.addEventListener('submit', e => {
+        e.preventDefault();
+
+        elem.forEach(input => {
+
+            let existingMessage = input.nextElementSibling;
+            if (existingMessage && existingMessage.classList.contains('error')) {
+
+                existingMessage.remove();
+            }
+
+            let message = document.createElement('div');
+
+            function addMessage(text) {
+                message.textContent = text;
+                message.classList.add('error')
+                input.insertAdjacentElement('afterend', message);
+                input.style.border = '1px solid red'
+            }
+
+            if (!input.value && input.getAttribute('type') === 'text') {
+                addMessage(textMessage.name)
+            } else if (!input.value && input.getAttribute('type') === 'number') {
+                addMessage(textMessage.phone)
+            } else if (!input.value && input.getAttribute('type') === 'email') {
+                addMessage(textMessage.email)
+            }
+            else {
+                input.style.border = 'none'
+            }
+        });
+    });
+});
 
 
 
