@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/modern-normalize.css">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -90,8 +88,8 @@
             <p class="consultation__text">Просто заполните форму заявки <br />и мы перезвоним вам в течении 10 минут</p>
             <form class="form">
                 <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
-                <input name="email" placeholder="Ваш E-mail" type="email">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name=" email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
@@ -955,8 +953,8 @@
             <div class="modal__subtitle">и мы перезвоним вам в течении 10 минут</div>
             <form class="form form_center">
                 <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
-                <input name="email" placeholder="Ваш E-mail" type="email">
+                <input name="phone" placeholder="Ваш телефон"">
+                <input name=" email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
         </div>
@@ -967,8 +965,8 @@
             <div class="modal__subtitle">Пульсометр Polar FT1</div>
             <form class="form form_center">
                 <input name="name" placeholder="Ваше имя" type="text">
-                <input name="phone" placeholder="Ваш телефон" type="number">
-                <input name="email" placeholder="Ваш E-mail" type="email">
+                <input name="phone" placeholder="Ваш телефон"">
+                <input name=" email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_submit">Купить</button>
             </form>
         </div>
@@ -980,6 +978,11 @@
         </div>
     </div>
 
+    <a href="#up" class="uparrow">
+        <img src="icons/up-arrow.svg" alt="">
+    </a>
+
+    <script src="https://unpkg.com/imask"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

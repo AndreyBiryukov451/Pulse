@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "browser-sync": "^3.0.3",
-    "gulp-autoprefixer": "^8.0.0"
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0"
   }
 }
